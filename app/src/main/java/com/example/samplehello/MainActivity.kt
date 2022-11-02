@@ -13,8 +13,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.samplehello.ui.theme.SampleHelloTheme
 
 class MainActivity : ComponentActivity() {
+    // アプリのエントリポイントであり、他の関数を呼び出してUIを構築する
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // コンポーズ可能な関数を介してレイアウトを定義する
         setContent {
             SampleHelloTheme {
                 // A surface container using the 'background' color from the theme
@@ -26,9 +29,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// @Composableアノテーションがついた関数はすべて、setContent() 関数や他のコンポーズ可能な関数から呼び出すことができる
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = "私の名前は $name!")
 }
 
 @Preview(showBackground = true)
