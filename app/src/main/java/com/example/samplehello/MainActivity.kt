@@ -32,13 +32,15 @@ class MainActivity : ComponentActivity() {
 // @Composableアノテーションがついた関数はすべて、setContent() 関数や他のコンポーズ可能な関数から呼び出すことができる
 @Composable
 fun Greeting(name: String) {
-    Text(text = "私の名前は $name!")
+    Text(text = "私の名前は $name です")
 }
 
+// アプリ全体をビルドせずにアプリの外観を確認できる機能
+// そのために @Previewアノテーションを追加する
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     SampleHelloTheme {
-        Greeting("Android")
+        Greeting("うどん")
     }
 }
