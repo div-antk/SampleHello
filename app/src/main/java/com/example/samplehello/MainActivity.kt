@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.samplehello.ui.theme.SampleHelloTheme
 
@@ -32,7 +33,9 @@ class MainActivity : ComponentActivity() {
 // @Composableアノテーションがついた関数はすべて、setContent() 関数や他のコンポーズ可能な関数から呼び出すことができる
 @Composable
 fun Greeting(name: String) {
-    Text(text = "私の名前は $name です")
+    Surface(color = Color.Red) {
+        Text(text = "私の名前は $name です")
+    }
 }
 
 // アプリ全体をビルドせずにアプリの外観を確認できる機能
